@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
-	bot.user.setActivity("DND", "Made by Ronak!", ("type: PLAYING"));
+	bot.user.setActivity("Made by Ronak!", ("type: PLAYING"));
 });
 
 bot.on('message', message => {
