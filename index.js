@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const config = require("./config.json")
+const config = require("BOT_TOKEN")
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
