@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const config = require("process.env.BOT_TOKEN")
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -35,4 +34,4 @@ bot.on('message', message => {
 	}
 })
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.token);
