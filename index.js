@@ -36,16 +36,4 @@ bot.on('message', message => {
 	}
 })
 
-bot.on('message', message => {
-    let args = message.content.substring(PREFIX.length).split(" ");
-
-    switch(args[0]{
-        case 'ping':
-            message.channel.sendmessage('pong!')
-        break;
-        case 'clear':
-            if(!args[1]) return message.reply('Please specify the number of messages to delete!')
-            message.channel.bulkDelete(args[1];
-        break;
-
 bot.login(process.env.token);
