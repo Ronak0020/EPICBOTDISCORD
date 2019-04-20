@@ -36,4 +36,20 @@ bot.on('message', message => {
 	}
 })
 
+
+bot.on('message', message => {
+	
+	let args = message.content.substring(PREFIX.length).split(" ");
+	
+	switch(args[0]){
+		case 'user-info':
+			const user-info = new Discord.RichEmbed()
+			.setTitle('User Info')
+			.addField('User name', message.author.username)
+			.setThumbnail(message.author.avatarURL)
+			.setColor(0x00FF00)
+			message.channel.sendEmbed(user-info);
+		break;
+	};
+
 bot.login(process.env.token);
