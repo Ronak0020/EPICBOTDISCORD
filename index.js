@@ -46,7 +46,7 @@ bot.on('message', message => {
 		const USER = new Discord.RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
-		        .setField('Current Server', message.guild.name)
+		        .addField('Current Server', message.guild.name)
 		        .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
