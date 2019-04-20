@@ -8,6 +8,14 @@ bot.on('ready', async () => {
 	bot.user.setActivity("Made by Ronak!", ("type: PLAYING"));
 });
 
+bot.on('guildMemberAdd', member => {
+	
+	const channel = member.guild.channels.find(channel => channel.name === "《😍》team-joiner");
+	if(!channel) return;
+	
+	channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!! We now have ${membercount} members!!`)
+});
+
 bot.on('message', message => {
 	if(message.content === 'Hi')
 	{
