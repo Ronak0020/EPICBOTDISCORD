@@ -41,9 +41,13 @@ bot.on('message', message => {
 	let args = message.content.substring(PREFIX.length).split(" ");
 	
 	switch(args[0]){
-		case 'av':
-			message.author.displayAvatarURL
-		break;
-	                }
+		case 'del':
+			if(!args[1]) return message.reply('Please specify a number of messages to delete!')
+			let modRole = message.guilds.roles.find("name", "moderator");
+			if(message.member.roles.has(modRole.id))
+			message.channel.bulkDelete(args[1])
+	                } else {
+				message.reply('You dont have permission to use this command!');
+			}
 });
 bot.login(process.env.token);
