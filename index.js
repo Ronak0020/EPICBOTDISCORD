@@ -43,12 +43,12 @@ bot.on('message', message => {
 	
 	switch(args[0]){
 		case 'user-info':
-		const user-info = new Discord.RichEmbed()
+		const USER = new Discord.RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
-			message.channel.sendEmbed(user-info);
+			message.channel.sendEmbed(USER);
 		break;
 	};
 
