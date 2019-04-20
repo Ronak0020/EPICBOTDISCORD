@@ -46,8 +46,8 @@ bot.on('message', message => {
 			let modRole = message.guilds.roles.find("name", "moderator");
 			if(message.member.roles.has(modRole.id))
 			message.channel.bulkDelete(args[1])
-	                } else {
+	                }else {
 				message.reply('You dont have permission to use this command!');
-			}
+			       }
 });
 bot.login(process.env.token);
