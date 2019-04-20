@@ -36,16 +36,4 @@ bot.on('message', message => {
 	}
 })
 
-bot.on('message', message => {
-	
-	let args = message.content.substring(PREFIX.length).split(" ");
-	
-	switch(args[0]){
-		case 'del':
-			if(!args[1]) return message.channel.send('Please specify the number of messages to delete! (for eg: ;del 20)')
-			message.channel.bulkDelete(args[1]);
-		break;
-	                }
-});
-
 bot.login(process.env.token);
