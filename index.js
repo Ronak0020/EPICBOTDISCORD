@@ -43,7 +43,7 @@ bot.on('message', message => {
 	
 	switch(args[0]){
 		case 'user-info':
-			const user-info = new Discord.RichEmbed()
+		const user-info = new Discord.RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
 			.setThumbnail(message.author.avatarURL)
