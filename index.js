@@ -42,7 +42,7 @@ bot.on('message', message => {
 	
 	switch(args[0]){
 		case 'del':
-			if(!args[1]) return message.channel.send('Please specify the number of messages to delete! (for eg: ;del 20)
+			if(!args[1]) return message.channel.send('Please specify the number of messages to delete! (for eg: ;del 20)')
 			mesage.channel.bulkDelete(args[1]);
 		break;
 });
