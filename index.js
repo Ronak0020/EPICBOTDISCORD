@@ -13,7 +13,7 @@ bot.on('message', message => {
 	{
 		message.channel.send('Hello!')
 	}
-});
+})
 
 bot.on('message', message => {
 	if(message.content === 'lol')
@@ -50,6 +50,6 @@ bot.on('message', message => {
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
 		break;
-	};
+})
 
 bot.login(process.env.token);
