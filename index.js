@@ -42,7 +42,7 @@ bot.on('message', message => {
 	
 	switch(args[0]){
 		case 'av':
-			message.reply('message.author.displayAvatarURL')
+			message.author.displayAvatarURL
 		break;
 	                }
 });
