@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const {Client, Attachment} = require('discord.js');
+const bot = new Client();
 
 const PREFIX = ';';
 
