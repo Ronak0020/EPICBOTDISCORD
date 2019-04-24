@@ -46,10 +46,10 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 	if(message.content.startsWith(';kick')) {
-		if(message.author.has(permission, [ADMINISTRATOR]));
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
+			if(message.author.has(permission, [ADMINISTRATOR]));
 			if(member) {
 				member.kick('The user was kicked').then(() => {
 					message.reply(`Successfully kicked ${user.tag}`);
