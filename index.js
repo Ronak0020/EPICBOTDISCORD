@@ -28,16 +28,6 @@ bot.on('message', message => {
 	{
 		message.reply('U r funny!')
 	}
-})
-
-bot.on('message', message => {
-	if(message.content.startsWith(';roles')) {
-		const roles = message.mentions.role.first();
-		if(roles) {
-			const roles = message.guild.member(role);
-			message.channel.role.members;
-		}
-	}
 });
 
 bot.on('message', message => {
