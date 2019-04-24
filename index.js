@@ -48,7 +48,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	
 	let args = message.content.substring(PREFIX.length).split(" ");
-	if(message.content.substring(PREFIX) !== 0) return;
+	if(message.content.substring(!PREFIX)) return;
 	
 	switch(args[0]){
 		case 'user-info':
