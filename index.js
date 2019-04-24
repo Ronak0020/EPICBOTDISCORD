@@ -44,6 +44,26 @@ bot.on('message', message => {
 	}
 })
 
+bot.on('message', message => {
+	if(message.content.startsWith(';kick')) {
+		const user = message.mentions.users.first();
+		if(user) {
+			const member = message.guild.member(user);
+			if(member) {
+				member.kick('The user was kicked').then(() => {
+					message.reply(`Successfully kicked ${user.tag}`);
+				  }).catch(err => {
+					  message.reply('The user was not kicked! I cant kick a member with Mods or Admins permissions');
+					  console.error(err);
+			});
+		    } else {
+				message.reply('the user is not in this server');
+			}
+	} else {
+		message.reply('Please mention a user to kick');
+	}
+}
+});
 
 bot.on('message', message => {
 	
