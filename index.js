@@ -34,7 +34,7 @@ bot.on('message', message => {
 	if(message.content.startsWith(';role')) {
 		message.name.role.members;
 	}
-}
+});
 
 bot.on('message', message => {
 	if(message.content === ';pikachu')
