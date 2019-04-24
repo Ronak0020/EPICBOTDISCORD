@@ -46,7 +46,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 	if(message.content.startsWith(';kick')) {
-		if(message.author.hasPermission(Administrator));
+		if(message.author.has(permission, [checkAdmin]));
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
