@@ -31,6 +31,12 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
+	if(message.content.startsWith(';role')) {
+		message.name.role.member;
+	}
+}
+
+bot.on('message', message => {
 	if(message.content === ';pikachu')
 	{
 		message.channel.send('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp')
@@ -49,7 +55,6 @@ bot.on('message', message => {
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
-			if(message.author.has(permission, [ADMINISTRATOR]));
 			if(member) {
 				member.kick('The user was kicked').then(() => {
 					message.reply(`Successfully kicked ${user.tag}`);
