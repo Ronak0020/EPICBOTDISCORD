@@ -64,7 +64,7 @@ bot.on('message', message => {
 			message.channel.send('Please specify what info you want? `1. Bot, 2. Developer, 3. Server, 4. Commands` (type ;info <type of info>')
 		break;
 		case 'info':
-		if(args[1] === 'bot'){
+		        if(args[1] === 'bot'){
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')	
 		}
 		break;				
