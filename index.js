@@ -1,4 +1,4 @@
-const {Client, Attachment} = require('discord.js');
+const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
 const PREFIX = ';';
