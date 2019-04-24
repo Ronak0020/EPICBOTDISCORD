@@ -56,6 +56,7 @@ bot.on('message', message => {
 			.addField('User name', message.author.username)
 			.addField('Current Server', message.guild.name)
 			.addField('Status', message.author.status)
+			.addField('Last message', message.author.lastMessage)
 		    .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
