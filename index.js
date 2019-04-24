@@ -49,8 +49,7 @@ bot.on('message', message => {
 	
 	let args = message.content.substring(PREFIX.length).split(" ");
 	
-	switch(args[0]){
-	if(message.content.substring(!PREFIX)) return;		
+	switch(args[0]){	
 		case 'user-info':
 		const USER = new RichEmbed()
 			.setTitle('User Info')
