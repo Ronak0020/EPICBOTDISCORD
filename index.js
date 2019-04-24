@@ -28,7 +28,7 @@ bot.on('message', message => {
 	{
 		message.reply('U r funny!')
 	}
-});
+})
 
 bot.on('message', message => {
 	if(message.content === ';pikachu')
@@ -42,27 +42,6 @@ bot.on('message', message => {
 	{
 		message.channel.send('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
 	}
-})
-
-bot.on('message', message => {
-	if(message.content.startsWith(';kick')) {
-		const user = message.mentions.users.first();
-		if(user) {
-			const member = message.guild.member(user);
-			if(member) {
-				member.kick('The user was kicked').then(() => {
-					message.reply(`Successfully kicked ${user.tag}`);
-				  }).catch(err => {
-					  message.reply('The user was not kicked! I cant kick a member with Mods or Admins permissions');
-					  console.error(err);
-			});
-		    } else {
-				message.reply('the user is not in this server');
-			}
-	} else {
-		message.reply('Please mention a user to kick');
-	}
-}
 })
 
 bot.on('message', message => {
@@ -90,6 +69,6 @@ bot.on('message', message => {
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
 		break;				
 	                }
-})
+});
 
 bot.login(process.env.token);
