@@ -1,9 +1,7 @@
 const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
-const prefix = ';';
-const args = message.content.slice(prefix.length).trim().split(/ ;/g);
-const command = args.shift().toLowerCase();
+const PREFIX = ';';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -49,7 +47,8 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 	
-	let args = message.content.substring(prefix.length).split(" ");
+	let args = message.content.substring(PREFIX.length).split(" ");
+	if(message.content.substring(PREFIX) !== 0) return;
 	
 	switch(args[0]){
 		case 'user-info':
