@@ -31,8 +31,12 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content.startsWith(';role')) {
-		message.name.role.members;
+	if(message.content.startsWith(';roles')) {
+		const roles = message.mentions.role.first();
+		if(roles) {
+			const roles = message.guild.member(role);
+			message.channel.role.members;
+		}
 	}
 });
 
