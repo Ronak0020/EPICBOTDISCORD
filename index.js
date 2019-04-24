@@ -1,4 +1,4 @@
-const {Client, Attachment} = require('discord.js');
+const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
 const PREFIX = ';';
@@ -10,7 +10,7 @@ bot.on('ready', async () => {
 
 bot.on('guildMemberAdd', member => {
 	
-	const channel = member.guild.channels.find(channel => channel.name === 'welcome');
+	const channel = member.guild.channels.find(ch => ch.name === 'welcome');
 	if(!channel) return;
 	
 	message.channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
