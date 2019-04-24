@@ -1,10 +1,19 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-const config = require("./config.json")
+const {Client, Attachment} = require('discord.js');
+const bot = new Client();
+
+const PREFIX = ';';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
 	bot.user.setActivity("Made by Ronak!", ("type: PLAYING"));
+});
+
+bot.on('guildMemberAdd', member => {
+	
+	const channel = member.guild.channels.find(channel => channel.name === 'welcome');
+	if(!channel) return;
+	
+	channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
 });
 
 bot.on('message', message => {
@@ -12,10 +21,10 @@ bot.on('message', message => {
 	{
 		message.channel.send('Hello!')
 	}
-});
+})
 
 bot.on('message', message => {
-	if(message.content === ';lol')
+	if(message.content === 'lol')
 	{
 		message.reply('U r funny!')
 	}
@@ -35,4 +44,23 @@ bot.on('message', message => {
 	}
 })
 
-bot.login(config.token);
+
+bot.on('message', message => {
+	
+	let args = message.content.substring(PREFIX.length).split(" ");
+	
+	switch(args[0]){
+		case 'user-info':
+		const USER = new Discord.RichEmbed()
+			.setTitle('User Info')
+			.addField('User name', message.author.username)
+		        .addField('Current Server', message.guild.name)
+		        .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
+			.setThumbnail(message.author.avatarURL)
+			.setColor(0x00FF00)
+			message.channel.sendEmbed(USER);
+		break;
+	                }
+});
+
+bot.login(process.env.token);
