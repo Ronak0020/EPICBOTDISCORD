@@ -51,13 +51,13 @@ bot.on('message', message => {
 	
 	switch(args[0]){
 		case 'user-info':
-		const USER = new Discord.RichEmbed()
+		const USER = new RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
 			.addField('Current Server', message.guild.name)
 			.addField('Status', message.author.status)
 			.addField('Last message', message.author.lastMessage)
-		    .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
+		        .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
