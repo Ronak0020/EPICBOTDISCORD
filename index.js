@@ -13,7 +13,7 @@ bot.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.find(channel => channel.name === 'welcome');
 	if(!channel) return;
 	
-	channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
+	message.channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
 });
 
 bot.on('message', message => {
@@ -62,10 +62,10 @@ bot.on('message', message => {
 		break;
 		case 'info':
 			message.channel.send('Please specify what info you want? `1. Bot, 2. Developer, 3. Server, 4. Commands` (type ;info <type of info>')
-		break;
-		case 'info':
 		        if(args[1] === 'bot'){
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')	
+		}else {
+			message.channel.send('Invalid Parameters!')
 		}
 		break;				
 	                }
