@@ -32,7 +32,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 	if(message.content.startsWith(';role')) {
-		message.name.role.member;
+		message.name.role.members;
 	}
 }
 
@@ -69,7 +69,7 @@ bot.on('message', message => {
 		message.reply('Please mention a user to kick');
 	}
 }
-});
+})
 
 bot.on('message', message => {
 	
@@ -96,6 +96,6 @@ bot.on('message', message => {
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
 		break;				
 	                }
-});
+})
 
 bot.login(process.env.token);
