@@ -13,7 +13,7 @@ bot.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.find(ch => ch.name === 'welcome');
 	if(!channel) return;
 	
-	message.channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
+	channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
 });
 
 bot.on('message', message => {
