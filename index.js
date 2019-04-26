@@ -38,6 +38,13 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
+	if(message.content === ';av')
+	{
+		message.reply(message.author.avatarURL)
+	}
+})
+
+bot.on('message', message => {
 	if(message.content === ';dialga')
 	{
 		message.channel.send('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
