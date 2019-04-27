@@ -24,7 +24,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content === 'lol') || (message.content === 'Lol') || (message.content === 'LOL')
+	if(message.content === 'lol')
 	{
 		message.reply('U r funny!')
 	}
@@ -40,7 +40,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === ';av')
 	{
-		message.reply(message.author.avatarURL)
+		message.reply(message.author.displayAvatar)
 	}
 })
 
