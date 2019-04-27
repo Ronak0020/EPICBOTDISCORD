@@ -24,7 +24,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.contains === 'lol')
+	if(message.contain === 'lol')
 	{
 		message.reply('U r funny!')
 	}
