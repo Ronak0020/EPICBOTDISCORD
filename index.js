@@ -52,7 +52,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
+	if(!message.author.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 	if(message.content.startsWith(';kick')) {
 		const user = message.mentions.users.first();
 		if(user) {
