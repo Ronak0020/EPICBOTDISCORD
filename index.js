@@ -48,7 +48,8 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === ';dialga')
 	{
-		message.channel.send('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
+		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
+		message.channel.send(attachment)
 	}
 })
 
