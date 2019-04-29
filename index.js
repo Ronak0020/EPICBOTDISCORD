@@ -33,9 +33,8 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === ';pikachu')
 	{
-		message.channel.send("Pika Pika!", {
-			attachment: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fpokemon%2Fimages%2F4%2F49%2FAsh_Pikachu.png%2Frevision%2Flatest%3Fcb%3D20170718053548&imgrefurl=https%3A%2F%2Fpokemon.fandom.com%2Fwiki%2FAsh%2527s_Pikachu&docid=BQuphKRsHukXCM&tbnid=CWEU_ZRsw0xLvM%3A&vet=10ahUKEwi59ZH8hvXhAhUJdCsKHQS3DJQQMwhuKAkwCQ..i&w=1920&h=1080&safe=active&bih=657&biw=1366&q=pikachu&ved=0ahUKEwi59ZH8hvXhAhUJdCsKHQS3DJQQMwhuKAkwCQ&iact=mrc&uact=8"
-		});
+		const attachment = new MessageAttachment('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp');
+		message.channel.send(attachmemt)
 	}
 })
 
