@@ -52,8 +52,8 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(!message.author.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 	if(message.content.startsWith(';kick')) {
+		if(!message.author.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
