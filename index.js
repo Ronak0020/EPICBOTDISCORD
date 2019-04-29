@@ -33,7 +33,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === ';pikachu')
 	{
-		message.channel.send('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp')
+		message.attachments.url(url => 'https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp')
 	}
 })
 
