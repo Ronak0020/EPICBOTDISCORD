@@ -34,7 +34,7 @@ bot.on('message', message => {
 	if(message.content === ';pikachu')
 	{
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp');
-		message.channel.send(attachmemt)
+		message.channel.send(attachment)
 	}
 })
 
