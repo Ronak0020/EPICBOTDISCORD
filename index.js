@@ -1,7 +1,7 @@
 const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
-const PREFIX = ';';
+const PREFIX = 'ep!';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -31,7 +31,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content === ';pikachu')
+	if(message.content === 'ep!pikachu')
 	{
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp');
 		message.channel.send(attachment)
@@ -39,14 +39,14 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content === ';av')
+	if(message.content === 'ep!av')
 	{
 		message.reply(message.author.avatarURL)
 	}
 })
 
 bot.on('message', message => {
-	if(message.content === ';dialga')
+	if(message.content === 'ep!dialga')
 	{
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
 		message.channel.send(attachment)
@@ -54,7 +54,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content.startsWith(';kick')) {
+	if(message.content.startsWith('ep!kick')) {
 		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
