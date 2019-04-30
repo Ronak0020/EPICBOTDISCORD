@@ -78,10 +78,10 @@ bot.on('message', message => {
 bot.on('message', message => {
 	
 	if(!message.content.startsWith(PREFIX)) return;
-	var args = message.content.substring('PREFIX.length').split(" ");
+	let args = message.content.substring('PREFIX.length').split(" ");
 	
 	switch(args[0]){	
-		case ';user-info':
+		case 'user-info':
 		const USER = new RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
@@ -95,11 +95,11 @@ bot.on('message', message => {
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
 		break;
-		case ';info':
+		case 'info':
 			if(message.author.bot) return;
 			message.channel.send('Please specify what info you want? `1. Bot, 2. Developer, 3. Server, 4. Commands` (type ;;infobot, ;;infodeveloper and so on....')
 		break;
-		case ';infobot':
+		case 'infobot':
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
 		break;				
 	                }
