@@ -41,7 +41,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === 'ep!av')
 	{
-		message.mentions.user.displayAvatarURL
+		message.mentions.user.avatarURL
 	}
 })
 
