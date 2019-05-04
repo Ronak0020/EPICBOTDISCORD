@@ -17,9 +17,14 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-	if(message.content.toLowerCase === 'HI')
+	if(message.content === 'Hi')
 	{
 		message.channel.send('Hello!')
+	}
+	let mentionrole = MessageMention.roles.find(role, role => test);
+	if(message.content === 'ep!mentrole')
+	{
+		message.channel.send(mentionrole)
 	}
 })
 
