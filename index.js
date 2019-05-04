@@ -21,11 +21,6 @@ bot.on('message', message => {
 	{
 		message.channel.send('Hello!')
 	}
-	let mentionrole = MessageMention.roles.find(role, role => test);
-	if(message.content === 'ep!mentrole')
-	{
-		message.channel.send(mentionrole)
-	}
 })
 
 bot.on('message', message => {
