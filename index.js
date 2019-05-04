@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-	if(message.content.toLocaleLowerCase === 'hi')
+	if(message.content.toLowerCase === 'HI')
 	{
 		message.channel.send('Hello!')
 	}
