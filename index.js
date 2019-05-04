@@ -51,6 +51,11 @@ bot.on('message', message => {
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
 		message.channel.send(attachment)
 	}
+	if(message.content === "ep!menttest")
+    {
+        let test = message.server.roles.get('name', 'test');
+        bot.sendMessage(message, `${test} are on the way!`);
+    }
 })
 
 bot.on('message', message => {
