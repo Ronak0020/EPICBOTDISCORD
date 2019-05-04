@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-	if(message.content === 'hi')
+	if(message.content.toLocaleLowerCase === 'hi')
 	{
 		message.channel.send('Hello!')
 	}
@@ -41,7 +41,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === 'ep!av')
 	{
-		message.channel.send(message.mentions.user.avatarURL)
+		message.reply(message.author.avatarURL)
 	}
 })
 
