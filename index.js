@@ -2,6 +2,7 @@ const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
 const PREFIX = 'ep!';
+let msg = message.content.toLowerCase
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -39,9 +40,10 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content === 'ep!av')
+	if(mesg === 'ep!av')
 	{
-		message.reply(message.author.avatarURL)
+		let avmen = message.mentions.user.first() || message.author;
+		avmen(message.author.avatarURL)
 	}
 })
 
@@ -51,11 +53,6 @@ bot.on('message', message => {
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
 		message.channel.send(attachment)
 	}
-	if(message.content === "ep!menttest")
-    {
-        let test = message.server.roles.get('name', 'test');
-        bot.sendMessage(message, `${test} are on the way!`);
-    }
 })
 
 bot.on('message', message => {
