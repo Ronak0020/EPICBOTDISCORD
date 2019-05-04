@@ -2,7 +2,6 @@ const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
 const PREFIX = 'ep!';
-let msg = message.content.toLowerCase
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
