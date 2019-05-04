@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('message', message => {
-	if(message.content.toLowerCase === 'Hi')
+	if(message.content.toLowerCase === 'hi')
 	{
 		message.channel.send('Hello!')
 	}
@@ -39,7 +39,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content.toLowerCase === 'ep!av')
+	if(message.content === 'ep!av')
 	{
 		let avmen = message.mentions.user.first() || message.author;
 		avmen(message.author.avatarURL)
