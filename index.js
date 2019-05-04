@@ -39,7 +39,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(mesg === 'ep!av')
+	if(message.content.toLowerCase === 'ep!av')
 	{
 		let avmen = message.mentions.user.first() || message.author;
 		avmen(message.author.avatarURL)
