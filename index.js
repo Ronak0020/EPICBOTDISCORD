@@ -83,9 +83,9 @@ bot.on('message', message => {
 		case 'user-info':
 		const USER = new RichEmbed()
 			.setTitle('User Info')
-			.addField('User name', message.member.username)
+			.addField('User name', message.author.username)
 			.addField('Current Server', message.guild.name)
-			.addField('Status', message.member.status)
+			.addField('Status', message.author.status)
 			.addField('Last message', message.member.lastMessage)
 			.addField('Joined server', message.member.joinedAt)
 			.addField('User ID', message.member.id)
