@@ -1,7 +1,7 @@
 const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
-const PREFIX = ';';
+const PREFIX = 'ep!';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -80,7 +80,7 @@ bot.on('message', message => {
 	let args = message.content.substring(PREFIX.length).split(" ");
 	
 	switch(args[0]){	
-		case ';user-info':
+		case 'user-info':
 		const USER = new RichEmbed()
 			.setTitle('User Info')
 			.addField('User name', message.member.username)
