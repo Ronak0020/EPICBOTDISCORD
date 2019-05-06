@@ -81,16 +81,16 @@ bot.on('message', message => {
 	let args = message.content.substring('PREFIX.length').split(" ");
 	
 	switch(args[0]){	
-		case 'user-info':
+		case ';user-info':
 		const USER = new RichEmbed()
 			.setTitle('User Info')
-			.addField('User name', message.author.username)
+			.addField('User name', message.member.username)
 			.addField('Current Server', message.guild.name)
-			.addField('Status', message.author.status)
-			.addField('Last message', message.author.lastMessage)
-			.addField('Joined server', message.author.joinedAt)
-			.addField('User ID', message.author.id)
-		        .setFooter('PLEASE HELP US TO GAIN MORE MEMBERS!!')
+			.addField('Status', message.member.status)
+			.addField('Last message', message.member.lastMessage)
+			.addField('Joined server', message.member.joinedAt)
+			.addField('User ID', message.member.id)
+		        .setFooter('BOT CREATED BY RONAK (still in development)')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
