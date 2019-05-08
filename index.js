@@ -100,7 +100,12 @@ bot.on('message', message => {
 		break;
 		case 'infobot':
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
-		break;				
+		break;
+		case 'clear':
+		   if(!args[1]) return message.reply('Please specify thr number of messages to delete!')
+		   if(!message.member.hasPermission(['MANAGE_MESSAGES'])) return message.reply('You do not have permission to use this command!')
+		   message.channel.bulkDelete(args[1])
+	  break;
 	                }
 });
 
