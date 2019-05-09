@@ -107,7 +107,8 @@ bot.on('message', message => {
 		   message.channel.bulkDelete(args[1])
 		   message.channel.send(`deleted __***${args[1]}***__ messages!`).then(() => {
 		     mesaage.delete(5000)
-		   })		   message.delete()
+		   })
+		   message.delete()
 		break;
 		case 'say':
 		  let botmessage = args.join(" ");
