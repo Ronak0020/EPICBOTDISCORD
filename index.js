@@ -113,7 +113,7 @@ bot.on('message', message => {
 		case 'say':
 		  let botmessage = args.join(" ");
 		  message.delete().catch();
-		  mesaage.channel.send(botmessage)
+		  message.channel.send(botmessage)
 	  break;
 	                }
 });
