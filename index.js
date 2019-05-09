@@ -106,7 +106,7 @@ bot.on('message', message => {
 		   if(!message.member.hasPermission(['MANAGE_MESSAGES'])) return message.reply('You do not have permission to use this command!')
 		   message.channel.bulkDelete(args[1])
 		   message.channel.send(`deleted __***${args[1]}***__ messages!`).then(() => {
-		     mesaage.delete(5000)
+		     message.delete(5000)
 		   })
 		   message.delete()
 		break;
