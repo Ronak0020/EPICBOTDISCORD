@@ -24,6 +24,13 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
+  if(message.content === 'Ronak')
+  {
+    message.channel.send('My God!🙏')
+  }
+})
+
+bot.on('message', message => {
 	if(message.content === 'lol')
 	{
 		message.reply('U r funny!')
@@ -85,8 +92,8 @@ bot.on('message', message => {
 			.setTitle('User Info')
 			.addField('User name', message.author.username)
 			.addField('Current Server', message.guild.name)
-			.addField('Status', message.author.status)
 			.addField('Last message', message.member.lastMessage)
+			.addField('Joined discord at', message.member.createdAt)
 			.addField('Joined server', message.member.joinedAt)
 			.addField('User ID', message.member.id)
 		        .setFooter('BOT CREATED BY RONAK (still in development)')
