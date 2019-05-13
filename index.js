@@ -122,14 +122,9 @@ bot.on('message', message => {
 		  message.delete().catch();
 		  message.channel.send(botmessage)
 		break;
-		case 'mention':
+		case 'give':
 		if(!message.member.hasPermission(['MANAGE_SERVER'])) return message.reply('You cant use that command!')
-		let roleid = message.mentions.roles.id
-		if(args[1] = 'test'){
-			message.channel.send(roleid)
-		}else{
-			return;
-		}
+			message.channel.send('<@&553191356932030474>')
 		break;
 	                }
 });
