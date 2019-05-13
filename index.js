@@ -24,7 +24,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-  if(message.content.toLowerCase().startsWith === 'ronak')
+  if(message.content === 'Ronak')
   {
     message.channel.send('My God!🙏')
   }
