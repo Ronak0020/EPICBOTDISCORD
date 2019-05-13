@@ -109,11 +109,11 @@ bot.on('message', message => {
 			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
 		break;
 		case 'clear':
-		   if(!args[1]) return message.reply('Please specify thr number of messages to delete!')
+		   if(!args[1]) return message.reply('Please specify the number of messages to delete!')
 		   if(!message.member.hasPermission(['MANAGE_MESSAGES'])) return message.reply('You do not have permission to use this command!')
 		   message.channel.bulkDelete(args[1])
 		   message.channel.send(`deleted __***${args[1]}***__ messages!`).then(() => {
-		     message.delete(5000)
+		     message.delete(900)
 		   })
 		   message.delete()
 		break;
@@ -121,7 +121,12 @@ bot.on('message', message => {
 		  let botmessage = args.join(" ");
 		  message.delete().catch();
 		  message.channel.send(botmessage)
-	  break;
+		break;
+		case 'mention':
+		if(!args[1]) return;
+		if(!message.member.hasPermission(['MANAGE_SERVER'])) return message.reply('You cant use that command!')
+		message.channel.send(`<@&${args[1]}>`)
+		break;
 	                }
 });
 
