@@ -125,7 +125,7 @@ bot.on('message', message => {
 		case 'mention':
 		if(!args[1]) return;
 		if(!message.member.hasPermission(['MANAGE_SERVER'])) return message.reply('You cant use that command!')
-		message.channel.send(`<@&455963487831588864>`)
+		message.channel.send('<@&565485874163220482>')
 		break;
 	                }
 });
