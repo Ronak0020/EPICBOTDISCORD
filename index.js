@@ -124,7 +124,7 @@ bot.on('message', message => {
 		break;
 		case 'mention':
 		if(!message.member.hasPermission(['MANAGE_SERVER'])) return message.reply('You cant use that command!')
-		let roleid = message.mentions.roles.find()
+		let roleid = message.mentions.roles.first()
 		if(args[1] = 'test'){
 			message.channel.send(roleid.id)
 		}else{
