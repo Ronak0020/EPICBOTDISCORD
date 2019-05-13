@@ -124,7 +124,9 @@ bot.on('message', message => {
 		break;
 		case 'give':
 		if(!message.member.hasPermission(['MANAGE_ROLES'])) return message.reply('You cant use that command!')
-			message.channel.send('<@&553191356932030474>')
+			message.channel.send('<@&553191356932030474>').then(() => {
+				message.delete()
+			})
 		break;
 	                }
 });
