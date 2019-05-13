@@ -127,6 +127,8 @@ bot.on('message', message => {
 		if(!message.member.hasPermission(['MANAGE_SERVER'])) return message.reply('You cant use that command!')
 		if(args[1] = 'test') {
 			message.channel.send('<@&565485874163220482>')
+		} else {
+			return message.channel.send('role was not found!')
 		}
 		break;
 	                }
