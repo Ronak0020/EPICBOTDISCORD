@@ -134,7 +134,7 @@ bot.on('message', message => {
 				let dMessage = args.join(" ").slice(22);
 				if(dMessage.length < 1) return message.reply('You must supply a message!')
 		
-				dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`)
+				dUser.send(`${dUser} ${dMessage}`)
 		
 				message.author.send(`${message.author} You have sent your message to ${dUser}`)
 		break;
