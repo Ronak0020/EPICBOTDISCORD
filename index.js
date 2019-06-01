@@ -97,7 +97,7 @@ bot.on('message', message => {
 			.addField('Joined discord at', message.author.createdAt)
 			.addField('Joined server', mmbr(joinedAt))
 			.addField('User ID', mmbr(id))
-		        .setFooter('BOT CREATED BY RONAK (still in development)')
+		  .setFooter('BOT CREATED BY RONAK (still in development)')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
