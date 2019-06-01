@@ -89,7 +89,7 @@ bot.on('message', message => {
 	switch(args[0]){	
 		case 'user-info':
 		const USER = new RichEmbed()
-		let mmbr = message.mentions.users.first()
+		let mmbr = message.mentions.users.first();
 			.addField('User name', mmbr(username))
 			.addField('Current Server', message.guild.name)
 			.addField('Last message', mmbr(lastMessage))
