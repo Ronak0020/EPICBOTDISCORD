@@ -141,7 +141,7 @@ bot.on('message', message => {
 		case 'role':
 			if(!message.member.hasPermission(['MANAGE_ROLES'])) return;
 			var role = message.guild.roles.find(role => role.name === "test");
-      message.mentions.user.addRole(role);
+      message.mentions.users.addRole(role);
 	                }
 });
 
