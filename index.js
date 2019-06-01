@@ -33,7 +33,7 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === 'lol')
 	{
-		message.channel.send('U r funny!')
+		message.reply('U r funny!')
 	}
 })
 
@@ -89,14 +89,14 @@ bot.on('message', message => {
 	switch(args[0]){	
 		case 'user-info':
 		const USER = new RichEmbed()
-		let mmbr = message.mentions.users.first();
-			.addField('User name', mmbr(username))
+			.setTitle('User Info')
+			.addField('User name', message.author.username)
 			.addField('Current Server', message.guild.name)
-			.addField('Last message', mmbr(lastMessage))
+			.addField('Last message', message.member.lastMessage)
 			.addField('Joined discord at', message.author.createdAt)
-			.addField('Joined server', mmbr(joinedAt))
-			.addField('User ID', mmbr(id))
-		  .setFooter('BOT CREATED BY RONAK (still in development)')
+			.addField('Joined server', message.member.joinedAt)
+			.addField('User ID', message.member.id)
+		        .setFooter('BOT CREATED BY RONAK (still in development)')
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0x00FF00)
 			message.channel.sendEmbed(USER);
@@ -134,7 +134,7 @@ bot.on('message', message => {
 				let dMessage = args.join(" ").slice(22);
 				if(dMessage.length < 1) return message.reply('You must supply a message!')
 		
-				dUser.send(`${dUser} ${dMessage}`)
+				dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`)
 		
 				message.author.send(`${message.author} You have sent your message to ${dUser}`)
 		break;
