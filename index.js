@@ -139,7 +139,7 @@ bot.on('message', message => {
 				message.author.send(`${message.author} You have sent your message to ${dUser}`)
 		break;
 		case 'role':
-			var role = message.guild.roles.find(role => role.name === "test");
+			var role = message.guild.roles.find(role => role.name === "New poké trainer") || (role => role.name === "∴━━━✿━━━∴ [ Level Roles ] ∴━━━✿━━━∴");
 			message.member.addRole(role)
 			message.author.send('Thanks for verifying!');
 	                }
