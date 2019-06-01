@@ -139,7 +139,7 @@ bot.on('message', message => {
 				message.author.send(`${message.author} You have sent your message to ${dUser}`)
 		break;
 		case 'role':
-			if(!message.user.hasPermission(['MANAGE_ROLES'])) return;
+			if(!message.member.hasPermission(['MANAGE_ROLES'])) return;
 			var role = message.guild.roles.find(role => role.name === "test");
       message.mentions.user.first().addRole(role);
 	                }
