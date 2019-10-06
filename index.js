@@ -1,7 +1,7 @@
 const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
-const PREFIX = 'ep!';
+const PREFIX = 'gg!';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
@@ -13,7 +13,7 @@ bot.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.find(ch => ch.name === 'welcome');
 	if(!channel) return;
 	
-	channel.send(`Hey! Welcome to our server ${member}! Please read rules and start chatting!`)
+	channel.send(`Hey! Welcome to our server! Please read rules and start chatting!`)
 });
 
 bot.on('message', message => {
@@ -33,12 +33,12 @@ bot.on('message', message => {
 bot.on('message', message => {
 	if(message.content === 'lol')
 	{
-		message.reply('U r funny!')
+		message.channel.send('U r funny!')
 	}
 })
 
 bot.on('message', message => {
-	if(message.content === 'ep!pikachu')
+	if(message.content === 'gg!pikachu')
 	{
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566891274754588672/pikachu_hi_pokemon.webp');
 		message.channel.send(attachment)
@@ -46,14 +46,14 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content === 'ep!av')
+	if(message.content === 'gg!av')
 	{
 		message.reply(message.author.avatarURL)
 	}
 })
 
 bot.on('message', message => {
-	if(message.content === 'ep!dialga')
+	if(message.content === 'gg!dialga')
 	{
 		const attachment = new Attachment('https://cdn.discordapp.com/attachments/547949244686794782/566933965521289226/DialgaVSpalkia_hq.gif')
 		message.channel.send(attachment)
@@ -61,7 +61,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content.startsWith('ep!kick')) {
+	if(message.content.startsWith('gg!kick')) {
 		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
@@ -71,6 +71,28 @@ bot.on('message', message => {
 					message.reply(`Successfully kicked ${user.tag}`);
 				  }).catch(err => {
 					  message.reply('The user was not kicked! I cant kick a member with Mods or Admins permissions');
+					  console.error(err);
+			});
+		    } else {
+				message.reply('the user is not in this server');
+			}
+	} else {
+		message.reply('Please mention a user to kick');
+	}
+}
+});
+
+bot.on('message', message => {
+	if(message.content.startsWith('gg!ban')) {
+		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
+		const user = message.mentions.users.first();
+		if(user) {
+			const member = message.guild.member(user);
+			if(member) {
+				member.ban('The user was banned').then(() => {
+					message.reply(`Successfully banned ${user.tag}`);
+				  }).catch(err => {
+					  message.reply('The user was not banned! I cant ban a member with Mods or Admins permissions');
 					  console.error(err);
 			});
 		    } else {
@@ -103,10 +125,10 @@ bot.on('message', message => {
 		break;
 		case 'info':
 			if(message.author.bot) return;
-			message.channel.send('Please specify what info you want? `1. Bot, 2. Developer, 3. Server, 4. Commands` (type ep!infobot, ep!infodeveloper and so on....')
+			message.channel.send('Please specify what info you want? `1. Bot, 2. Developer, 3. Server, 4. Commands` (type gg!infobot, ep!infodeveloper and so on....')
 		break;
 		case 'infobot':
-			message.channel.send('__***Hi there! I am Epic Poke bot! I was cretaed for Epic poke server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
+			message.channel.send('__***Hi there! I am Giveaway\'s Galaxy bot! I was cretaed for Giveaway\'s Galaxy server! I can manage the server and i can do things that requires `ADMINISTRATIVE PERMISSIONS`! I AM STILL IN DEVELOPMENT!!***__')
 		break;
 		case 'clear':
 		   if(!args[1]) return message.reply('Please specify the number of messages to delete!')
