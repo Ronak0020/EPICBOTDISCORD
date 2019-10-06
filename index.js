@@ -83,7 +83,7 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
-	if(message.content.startsWith('ep!burn')) {
+	if(message.content.startsWith('gg!burn')) {
 		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
