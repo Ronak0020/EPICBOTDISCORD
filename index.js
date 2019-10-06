@@ -99,7 +99,7 @@ bot.on('message', message => {
 				message.reply('the user is not in this server');
 			}
 	} else {
-		message.reply('Please mention a user to kick');
+		message.reply('Please mention a user to ban');
 	}
 }
 });
