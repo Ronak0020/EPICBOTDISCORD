@@ -61,14 +61,14 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-	if(message.content.startsWith('gg!kick')) {
+	if(message.content.startsWith('gg!stab')) {
 		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
 			if(member) {
 				member.kick('The user was kicked').then(() => {
-					message.reply(`Successfully stabbed ${user.tag}! (S/He can still get alived!)`);
+					message.reply(`Successfully stabbed ${user.tag}! (S/He can still get alive!)`);
 				  }).catch(err => {
 					  message.reply(`The user was not stabbed! I don't have proper weapon to stab him! or maybe S/HE is a mod or admin!`);
 					  console.error(err);
@@ -83,14 +83,14 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
-	if(message.content.startsWith('ep!ban')) {
+	if(message.content.startsWith('ep!burn')) {
 		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
 		const user = message.mentions.users.first();
 		if(user) {
 			const member = message.guild.member(user);
 			if(member) {
 				member.ban('The user was banned').then(() => {
-					message.reply(`Successfully burnt ${user.tag}! S/He can't get alived now!`);
+					message.reply(`Successfully burnt ${user.tag}! S/He can't get alive now!`);
 				  }).catch(err => {
 					  message.reply(`The user was not burnt! I don't have proper weapon to burn him/her! or maybe S/HE is a mod or admin!`);
 					  console.error(err);
