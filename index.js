@@ -138,6 +138,7 @@ bot.on('message', message => {
 			.addField('Current Server', message.guild.name)
 			.addField('Last message', message.member.lastMessage)
 			.addField('Joined discord at', message.author.createdAt)
+			.addField('Status', message.author.status)
 			.addField('Joined server', message.member.joinedAt)
 			.addField('User ID', message.member.id)
 		        .setFooter('BOT CREATED BY RONAK (still in development)')
