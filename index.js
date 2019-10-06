@@ -68,16 +68,38 @@ bot.on('message', message => {
 			const member = message.guild.member(user);
 			if(member) {
 				member.kick('The user was kicked').then(() => {
-					message.reply(`Successfully kicked ${user.tag}`);
+					message.reply(`Successfully stabbed ${user.tag}! (S/He can still get alived!)`);
 				  }).catch(err => {
-					  message.reply('The user was not kicked! I cant kick a member with Mods or Admins permissions');
+					  message.reply(`The user was not stabbed! I don't have proper weapon to stab him! or maybe S/HE is a mod or admin!`);
 					  console.error(err);
 			});
 		    } else {
 				message.reply('the user is not in this server');
 			}
 	} else {
-		message.reply('Please mention a user to kick');
+		message.reply('Please mention a user to stab');
+	}
+}
+});
+
+bot.on('message', message => {
+	if(message.content.startsWith('ep!ban')) {
+		if(!message.member.hasPermission(['ADMINISTRATOR'])) return message.reply('You do not have permission to use this command!')
+		const user = message.mentions.users.first();
+		if(user) {
+			const member = message.guild.member(user);
+			if(member) {
+				member.ban('The user was banned').then(() => {
+					message.reply(`Successfully burnt ${user.tag}! S/He can't get alived now!`);
+				  }).catch(err => {
+					  message.reply(`The user was not burnt! I don't have proper weapon to burn him/her! or maybe S/HE is a mod or admin!`);
+					  console.error(err);
+			});
+		    } else {
+				message.reply('the user is not in this server');
+			}
+	} else {
+		message.reply('Please mention a user to burn');
 	}
 }
 });
@@ -134,9 +156,9 @@ bot.on('message', message => {
 				let dMessage = args.join(" ").slice(22);
 				if(dMessage.length < 1) return message.reply('You must supply a message!')
 		
-				dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`)
+				dUser.send(`${dMessage}`)
 		
-				message.author.send(`${message.author} You have sent your message to ${dUser}`)
+				message.author.send(`${message.author} You have sent your message to ${dUser.tag}`)
 		break;
 	                }
 });
