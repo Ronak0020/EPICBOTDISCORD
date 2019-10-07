@@ -184,9 +184,13 @@ bot.on('message', message => {
 		case 'slap':
 				let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 				let author = message.author;
-				const attachment = new Attachment('https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwizpP7O5YnlAhUKk3AKHQzpCfQQjRx6BAgBEAQ&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fanime-slap-gifs&psig=AOvVaw0lPRl5sljGxocWEjilQA9S&ust=1570525507047791')
+				const slap_img = [
+                                'https://discordapp.com/channels/626097765776097310/626288664330371083/630711309503168522', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711346370969616', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711355942633484', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711390419681290'
+                                ]
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
-				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, attachment)
+				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, {
+                                file: slap_img[Math.floor(Math.random() * slap_img.length)]
+                                })
 		break;		
 	                }
 });
