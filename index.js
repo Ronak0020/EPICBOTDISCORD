@@ -181,6 +181,12 @@ bot.on('message', message => {
 		
 				message.author.send(`${message.author} You have sent your message to ${dUser.id}`)
 		break;
+		case 'slap':
+				let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+				const attachment = new Attachment('https://images-ext-1.discordapp.net/external/Mjh-SesBluNQ_SohJpk_30ac6GgDvaQ4Mx3-kbBH1vs/https/cdn.weeb.sh/images/SJdXoVguf.gif')
+				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
+				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, attachment)
+		break;		
 	                }
 });
 
