@@ -189,7 +189,7 @@ bot.on('message', message => {
 				]
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
 				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, {
-					file: slap_img[Math.floor(Math.random() * slap_img.length)]
+					attachFile: slap_img[Math.floor(Math.random() * slap_img.length)]
 				})
 		break;		
 	                }
