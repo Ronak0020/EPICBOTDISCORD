@@ -10,7 +10,7 @@ bot.on('ready', async () => {
 
 bot.on('guildMemberAdd', member => {
 	
-	const channel = member.guild.channels.find(ch => ch.name === 'welcome');
+	const channel = member.guild.channels.find(ch => ch.name === '╟😃╢ᴡᴇʟᴄᴏᴍᴇ');
 	if(!channel) return;
 	
 	channel.send(`Hey! Welcome to our server! Please read rules and start chatting!`)
@@ -179,7 +179,7 @@ bot.on('message', message => {
 		
 				dUser.send(`${dMessage}`)
 		
-				message.author.send(`${message.author} You have sent your message to ${dUser.tag}`)
+				message.author.send(`${message.author} You have sent your message to ${dUser.id}`)
 		break;
 	                }
 });
