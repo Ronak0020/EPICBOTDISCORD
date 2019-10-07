@@ -185,7 +185,8 @@ bot.on('message', message => {
 				let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 				let author = message.author;
 				const slap_img = [
-					'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwizpP7O5YnlAhUKk3AKHQzpCfQQjRx6BAgBEAQ&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fanime-slap-gifs&psig=AOvVaw0lPRl5sljGxocWEjilQA9S&ust=1570525507047791', 'https://images-ext-1.discordapp.net/external/Mjh-SesBluNQ_SohJpk_30ac6GgDvaQ4Mx3-kbBH1vs/https/cdn.weeb.sh/images/SJdXoVguf.gif'
+					'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwizpP7O5YnlAhUKk3AKHQzpCfQQjRx6BAgBEAQ&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fanime-slap-gifs&psig=AOvVaw0lPRl5sljGxocWEjilQA9S&ust=1570525507047791',
+					'https://images-ext-1.discordapp.net/external/Mjh-SesBluNQ_SohJpk_30ac6GgDvaQ4Mx3-kbBH1vs/https/cdn.weeb.sh/images/SJdXoVguf.gif'
 				]
 				const attachment = new Attachment(slap_img)
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
