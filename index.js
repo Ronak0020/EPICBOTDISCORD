@@ -26,7 +26,7 @@ bot.on('message', message => {
 bot.on('message', message => {
   if(message.content === 'Ronak')
   {
-    message.channel.send(`My God!🙏 He is currently on a trip. Can't talk right now.`)
+    message.channel.send(`My God!🙏`)
   }
 })
 
