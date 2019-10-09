@@ -186,11 +186,15 @@ bot.on('message', message => {
 				let author = message.author;
 				const slap_img = [
                                 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711309503168522', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711346370969616', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711355942633484', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711390419681290'
-                                ]
+							]
+				let slap_cmd = {
+					file: slap_img[Math.floor(Math.random() * slap_img.length)]
+					}		
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
-				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, {
-                                file: slap_img[Math.floor(Math.random() * slap_img.length)]
-                                })
+				const Slap = new RichEmbed()
+				.addField(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, slap_cmd)
+				.setColor(0xFCA00F)
+				message.channel.send(Slap)
 		break;		
 	                }
 });
