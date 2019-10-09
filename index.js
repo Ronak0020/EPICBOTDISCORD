@@ -33,11 +33,10 @@ bot.on('message', message => {
 bot.on('message', message => {
   if(message.content.startsWith('gg!say'))
   {
-    message.delete
     let content = message.content
     content = content.replace('gg!say', ' ')
     message.channel.send(content)
-  }
+  } message.delete()
 })
 
 bot.on('message', message => {
