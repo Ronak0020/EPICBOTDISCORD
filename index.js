@@ -166,11 +166,6 @@ bot.on('message', message => {
 		  message.delete().catch();
 		  message.channel.send(botmessage)
 		break;
-		case 'give':
-		if(!message.member.hasPermission(['MANAGE_ROLES'])) return message.reply('You cant use that command!')
-			message.channel.send('<@&553191356932030474>').then(() => {
-				message.delete()
-			})
 			case 'dmu':          
 				let dUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 				if (!dUser) return message.channel.send("Can't find user!")
