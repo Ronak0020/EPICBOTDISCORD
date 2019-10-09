@@ -184,12 +184,12 @@ bot.on('message', message => {
 		case 'slap':
 				let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 				let author = message.author;
-				let slap_cmd = {
-					file: slap_img[Math.floor(Math.random() * slap_img.length)]
-				}
 				const slap_img = [
                                 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711309503168522', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711346370969616', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711355942633484', 'https://discordapp.com/channels/626097765776097310/626288664330371083/630711390419681290'
 							]
+				let slap_cmd = {
+								file: slap_img[Math.floor(Math.random() * slap_img.length)]
+							}
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
 				const Slap = new RichEmbed()
 				.addField(`Ouch! ${author} slapped ${user}! It hurts! :sob: `)
