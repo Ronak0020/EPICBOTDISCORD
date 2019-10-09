@@ -194,7 +194,7 @@ bot.on('message', message => {
 				const Hug = new RichEmbed()
 				.attachFile(hug1)
 				.setImage('attachment://tenor (5).gif')
-				message.channel.send(`Awww... ${author} hugged ${user}! Cute!! :smile:`, hug1)
+				message.channel.send(`Awww.... ${author} hugged ${user}! Cute!! :smile:`, hug1)
 		break;		
 	                }
 });
