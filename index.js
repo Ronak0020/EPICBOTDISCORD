@@ -31,7 +31,7 @@ bot.on('message', message => {
 })
 
 bot.on('message', message => {
-  if(message.content.startsWith === 'gg!say')
+  if(message.content.startsWith('gg!say'))
   {
     let content = message.content
     content = content.replace('gg!say', ' ')
