@@ -188,13 +188,13 @@ bot.on('message', message => {
 		break;
                 case 'hug':
 				let use = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-				let author = message.author;
+				let auth = message.author;
 				if(!args[1]) return message.reply('Please mention a valid user to hug!')
 				const hug1 = new Attachment('./tenor(5).gif', 'tenor (5).gif');
 				const Hug = new RichEmbed()
 				.attachFile(hug1)
 				.setImage('attachment://tenor (5).gif')
-				message.channel.send(`Awww.... ${author} hugged ${use}! Cute!! :smile:`, hug1)
+				message.channel.send(`Awww.... ${auth} hugged ${use}! Cute!! :smile:`, hug1)
 		break;		
 	                }
 });
