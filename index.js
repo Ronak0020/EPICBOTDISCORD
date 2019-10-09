@@ -187,10 +187,9 @@ bot.on('message', message => {
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
 				const slap1 = new Attachment('./slap_images/slap1.gif', 'slap1.gif');
 				const Slap = new RichEmbed()
-				.setTitle(`Ouch! ${author} slapped ${user}! It hurts! :sob: `)
 				.attachFile(slap1)
 				.setImage('attachment://slap1.gif')
-				message.channel.send(Slap)
+				message.channel.send(`Ouch! ${author} slapped ${user}! It hurts! :sob:`, Slap)
 		break;		
 	                }
 });
