@@ -189,10 +189,11 @@ bot.on('message', message => {
 							]
 				let slap_cmd = {
 					file: slap_img[Math.floor(Math.random() * slap_img.length)]
-					}		
+				}
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
 				const Slap = new RichEmbed()
-				.addField(`Ouch! ${author} slapped ${user}! It hurts! :sob: `, slap_cmd)
+				.addField(`Ouch! ${author} slapped ${user}! It hurts! :sob: `)
+				.addField(message.channel.send(slap_cmd))
 				.setColor(0xFCA00F)
 				message.channel.send(Slap)
 		break;		
