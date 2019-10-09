@@ -189,12 +189,12 @@ bot.on('message', message => {
 								'https://discordapp.com/channels/626097765776097310/626288664330371083/630711346370969616',
 								'https://discordapp.com/channels/626097765776097310/626288664330371083/630711355942633484',
 								'https://discordapp.com/channels/626097765776097310/626288664330371083/630711390419681290'
-				]
-				const slap_cmd = slap_img[Math.floor(Math.random() * slap_img.length)]	
+				]	
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
+				const slap1 = new Attachment('.slap_images/slap1.gif', 'slap1.gif')
 				const Slap = new RichEmbed()
 				.setTitle(`Ouch! ${author} slapped ${user}! It hurts! :sob: `)
-				.setImage(slap_cmd)
+				.setImage(slap1)
 				message.channel.send(Slap)
 		break;		
 	                }
