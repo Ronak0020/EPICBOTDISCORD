@@ -187,7 +187,7 @@ bot.on('message', message => {
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
 				const slap1 = new Attachment('./slap_images/slap1.gif', 'slap1.gif');
 				const slap_img = number = 4;
-				let imageNumber = Math.floor (Math.random() * number) + 1
+				let imageNumber = Math.floor(Math.random() * number) + 1;
 				({files: ["./slap_images/" + imageNumber + ".gif"]});
 				const Slap = new RichEmbed()
 				.attachFile(slap1)
