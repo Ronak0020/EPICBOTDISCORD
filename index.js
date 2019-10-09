@@ -36,7 +36,8 @@ bot.on('message', message => {
     let content = message.content
     content = content.replace('gg!say', ' ')
     message.channel.send(content)
-  } message.delete()
+    message.delete()
+  }
 })
 
 bot.on('message', message => {
