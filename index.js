@@ -180,7 +180,7 @@ bot.on('message', message => {
 				let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 				let author = message.author;
 				if(!args[1]) return message.reply('Please mention a valid user to Slap!')
-				const slap1 = new Attachment('./slap_images/slap1.gif', '1.gif');
+				const slap1 = new Attachment('./slap_images/1.gif', '1.gif');
 				const Slap = new RichEmbed()
 				.attachFile(slap1)
 				.setImage('attachment://1.gif')
