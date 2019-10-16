@@ -6,9 +6,10 @@ const PREFIX = 'gg!';
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
 	let statuses = [
-        `with ${bot.users.size}`,
-        'with my god Ronak',
-        'In my server'
+        `⚡with ${bot.users.size} users⚡`,
+        '❤️with my god Ronak!❤️',
+        '✨In my server!✨',
+        '🥰with my lovely Friends!'
 ]
         setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
