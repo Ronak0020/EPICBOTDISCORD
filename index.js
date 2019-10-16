@@ -5,7 +5,15 @@ const PREFIX = 'gg!';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
-	bot.user.setActivity("Made by Ronak!", ("type: PLAYING"));
+	let statuses = [
+        `with ${bot.users.size}`,
+        'with my god Ronak',
+        'In my server'
+]
+        setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        bot.user.setActivity(status, {type: "PLAYING"});
+}, 5000)
 });
 
 bot.on('guildMemberAdd', member => {
