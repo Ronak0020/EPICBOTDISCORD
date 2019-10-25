@@ -1,7 +1,7 @@
 const {Client, Attachment, RichEmbed} = require('discord.js');
 const bot = new Client();
 
-const PREFIX = 'gg!';
+var PREFIX = 'gg!';
 
 bot.on('ready', async () => {
 	console.log('${bot.user.username} is online!');
